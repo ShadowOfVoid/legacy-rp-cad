@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://legacy-roleplay.com" target="blank">
-    <img src="https://i.imgur.com/bitD1wG.png" alt="Legacy RP Logo" />
+    <img src="https://i.imgur.com/bitD1wG.png" height="100px" width="100px" alt="Legacy RP Logo" />
   </a>
 </p>
 
