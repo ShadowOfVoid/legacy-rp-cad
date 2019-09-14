@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://legacy-roleplay.com" target="blank">
+    <img src="https://i.imgur.com/bitD1wG.png" alt="Legacy RP Logo" />
+  </a>
+</p>
+
 # legacy-rp-cad
 
 A full web-based CAD (Computer-Aided-Dispatch) solution for the FiveM server Legacy Roleplay. The backend is written in PHP using [Laravel Framework](https://laravel.com/), while the frontend consists of [EmberJS](https://emberjs.com/).
