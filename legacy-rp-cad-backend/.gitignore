@@ -2,7 +2,7 @@
 /.idea
 
 # Frontend build folder
-./public/app
+/public/app
 
 # Other stuff
 /node_modules
