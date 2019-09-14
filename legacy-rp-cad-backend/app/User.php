@@ -2,10 +2,15 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * @property string account_id
+ * @property string identifier
+ * @property string name
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -16,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'account_id', 'name', 'avatar', 'api_token',
     ];
 
     /**
@@ -34,6 +39,28 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        // 'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Gets the identifier, which is a HEX version of the account id with a "steam:" prefix. Used as a way of
+     * identifying players on the game-server.
+     *
+     * @return string
+     */
+    protected function getIdentifierAttribute()
+    {
+        return 'steam:' . dechex($this->account_id);
+    }
+
+    /**
+     * Gets the user's player on the game-server.
+     *
+     * @return HasOne
+     */
+    public function player()
+    {
+        return $this->hasOne(Player::class, 'identifier', 'identifier');
+    }
+
 }
