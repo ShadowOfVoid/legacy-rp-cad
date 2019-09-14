@@ -1,5 +1,10 @@
-.idea/
+# IDE specific
+/.idea
 
+# Frontend build folder
+./public/app
+
+# Other stuff
 /node_modules
 /public/hot
 /public/storage
