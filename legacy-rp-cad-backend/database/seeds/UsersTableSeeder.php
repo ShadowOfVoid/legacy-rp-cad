@@ -1,5 +1,6 @@
 <?php
 
+use App\Character;
 use App\Player;
 use App\User;
 use Illuminate\Database\Seeder;

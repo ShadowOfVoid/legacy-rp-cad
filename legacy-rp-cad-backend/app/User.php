@@ -10,6 +10,8 @@ use Illuminate\Notifications\Notifiable;
  * @property string account_id
  * @property string identifier
  * @property string name
+ * @property string avatar
+ * @property string api_token
  */
 class User extends Authenticatable
 {

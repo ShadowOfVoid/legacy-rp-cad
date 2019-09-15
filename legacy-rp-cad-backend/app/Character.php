@@ -5,6 +5,20 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @property string identifier
+ * @property string firstname
+ * @property string lastname
+ * @property string name
+ * @property string gender
+ * @property string dob
+ * @property string story
+ * @property string job
+ * @property int height
+ * @property int cash
+ * @property int bank
+ * @property int money
+ */
 class Character extends Model
 {
 
@@ -45,6 +59,26 @@ class Character extends Model
         'ammo' => 'array',
         'animations' => 'array',
     ];
+
+    /**
+     * Gets the full name by concatenating firstname and lastname together.
+     *
+     * @return string
+     */
+    protected function getNameAttribute()
+    {
+        return $this->firstname . ' ' . $this->lastname;
+    }
+
+    /**
+     * Gets the total amount of money by adding cash and bank together.
+     *
+     * @return int
+     */
+    protected function getMoneyAttribute()
+    {
+        return $this->cash + $this->bank;
+    }
 
     /**
      * Gets the character's game-player profile.

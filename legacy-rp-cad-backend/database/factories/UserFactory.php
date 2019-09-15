@@ -13,8 +13,8 @@ $factory->define(User::class, function (Faker $faker) {
 
     return [
         'account_id' => $faker->numberBetween(10000000000, 100000000000),
-        'name' => $faker->name,
-        'avatar' => $avatar,
-        'api_token' => $faker->uuid
+        'name'       => $faker->name,
+        'avatar'     => $avatar,
+        'api_token'  => $faker->uuid
     ];
 });
