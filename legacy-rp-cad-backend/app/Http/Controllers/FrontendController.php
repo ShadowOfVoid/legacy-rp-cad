@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
 
+    /**
+     * Shows the entry index file.
+     */
     function show() {
         return view()->file('app/index.html');
     }

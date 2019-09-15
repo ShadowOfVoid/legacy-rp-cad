@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Character extends Model
 {
@@ -44,5 +45,14 @@ class Character extends Model
         'ammo' => 'array',
         'animations' => 'array',
     ];
+
+    /**
+     * Gets the character's game-player profile.
+     *
+     * @return BelongsTo
+     */
+    public function player() {
+        return $this->belongsTo(Player::class, 'identifier', 'identifier');
+    }
 
 }
