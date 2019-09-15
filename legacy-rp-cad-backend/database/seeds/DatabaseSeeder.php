@@ -2,8 +2,12 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Seeder for database.
+ */
 class DatabaseSeeder extends Seeder
 {
+
     /**
      * Seed the application's database.
      *
@@ -13,4 +17,5 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
     }
+
 }
