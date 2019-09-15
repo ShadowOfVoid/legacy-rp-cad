@@ -2,9 +2,16 @@
     /* Resetting of margin and padding on all elements */
     margin: 0;
     padding: 0;
+
+    /* everything as border-box */
+    box-sizing: border-box;
 }
 
 body {
     /* Font setting */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    
 }
