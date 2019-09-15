@@ -53,7 +53,8 @@ return [
     | `'posts' => App\Post::class`
     */
     'resources' => [
-        'characters' => \App\Character::class
+        'users' => \App\User::class,
+        'characters' => \App\Character::class,
     ],
 
     /*

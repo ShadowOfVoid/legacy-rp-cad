@@ -17,8 +17,8 @@ use CloudCreativity\LaravelJsonApi\Routing\RouteRegistrar;
 // https://laravel-json-api.readthedocs.io/en/latest/basics/routing/
 // https://laravel.com/docs/5.8/api-authentication#protecting-routes
 
-
 // Register the default JSON-API. Also protect the routes.
 JsonApi::register('default')->middleware('auth:api')->routes(function (RouteRegistrar $api) {
+    $api->resource('users');
     $api->resource('characters');
 });
