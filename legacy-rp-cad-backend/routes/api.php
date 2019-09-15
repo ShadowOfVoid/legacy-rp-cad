@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use CloudCreativity\LaravelJsonApi\Facades\JsonApi;
+use CloudCreativity\LaravelJsonApi\Routing\RouteRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// https://laravel-json-api.readthedocs.io/en/latest/basics/routing/
+// https://laravel.com/docs/5.8/api-authentication#protecting-routes
+
+
+// Register the default JSON-API. Also protect the routes.
+JsonApi::register('default')->middleware('auth:api')->routes(function (RouteRegistrar $api) {
+    $api->resource('characters');
 });

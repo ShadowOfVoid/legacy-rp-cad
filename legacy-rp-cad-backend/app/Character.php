@@ -51,7 +51,8 @@ class Character extends Model
      *
      * @return BelongsTo
      */
-    public function player() {
+    public function player()
+    {
         return $this->belongsTo(Player::class, 'identifier', 'identifier');
     }
 
