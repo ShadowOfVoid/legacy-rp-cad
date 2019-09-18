@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-category {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    margin: 0 30px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0px 15px 0px;
+}
+
+.nav-item {
+    line-height: 1;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}

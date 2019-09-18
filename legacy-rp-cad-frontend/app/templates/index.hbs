@@ -1,41 +1,35 @@
-{{!-- Wrap site in a grid container --}}
-<div class="container-grid">
+{{!-- Header --}}
+<header class="header">
+    <h2>Legacy RP - CAD</h2>
+</header>
 
-    {{!-- Header --}}
-    <header class="header">
-        <div>
-            <h2>LegacyRP CAD</h2>
-        </div>
-        <div>
-            <p>Header here</p>
-        </div>
-    </header>
+{{!-- Sidebar --}}
+<nav class="sidebar">
+    {{!-- Navigation in sidebar --}}
+    <ul class="nav">
+        {{! -- Main menu navigation --}}
+        <li class="nav-item nav-category">
+            Main menu
+        </li>
 
-    {{!-- Sidebar --}}
-    <nav class="sidebar">
-        <h2>Sidenav</h2>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <span class="menu-title">
+                    Nav link 1
+                </span>
+                <i class="menu-arrow fas fa-arrow-right"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
 
-        {{! Navigation in sidebar }}
-        <ul class="nav">
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <span class="menu-title">Dashboard</span>
-                    <i class="menu-arrow"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+{{!-- Main content --}}
+<main class="main">
 
-    {{!-- Main page content --}}
-    <main class="main">
-        <div class="row">
-            <h1>Test</h1>
-        </div>
-    </main>
+</main>
 
-    {{!-- Footer --}}
-    <footer class="container footer">
-        <h3>Footer</h3>
-    </footer>
+{{!-- Footer --}}
+<footer class="footer">
+    Footer
+</footer>
 
-</div>
