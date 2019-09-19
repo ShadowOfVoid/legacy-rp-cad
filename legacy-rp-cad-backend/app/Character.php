@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property string identifier
@@ -88,6 +89,16 @@ class Character extends Model
     public function player()
     {
         return $this->belongsTo(Player::class, 'identifier', 'identifier');
+    }
+
+    /**
+     * Gets
+     *
+     * @return HasMany
+     */
+    public function warrants()
+    {
+        return $this->hasMany(Warrant::class);
     }
 
 }
