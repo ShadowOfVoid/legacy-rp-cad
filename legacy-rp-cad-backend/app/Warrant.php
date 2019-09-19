@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Date;
 
 /**
+ * @property Character character
+ * @property Player issuer
  * @property Date expires_at
  * @property boolean processed
  * @property boolean active
