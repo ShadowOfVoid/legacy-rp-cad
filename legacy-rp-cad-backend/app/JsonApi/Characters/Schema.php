@@ -44,4 +44,5 @@ class Schema extends SchemaProvider
             'story'      => $resource->story,
         ];
     }
+
 }
