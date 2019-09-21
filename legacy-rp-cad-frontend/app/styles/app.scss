@@ -1,7 +1,20 @@
 // Import bootstrap
 @import "../../vendor/bootstrap/scss/bootstrap.scss";
 
+// Import custom css and overrides
+@import "./sidebar.scss";
+
 * {
     /* global transition */
     transition-duration: 0.145s;
+}
+
+#app {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.content {
+    width: 100%;
 }
