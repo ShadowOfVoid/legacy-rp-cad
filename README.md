@@ -13,7 +13,7 @@
 <br />
 
 A full web-based CAD (Computer-Aided-Dispatch) solution for the FiveM server Legacy Roleplay. The backend is written in PHP using [Laravel Framework](https://laravel.com/), while
-the frontend consists of [EmberJS](https://emberjs.com/) (+ [Bootstrap 4](https://getbootstrap.com/)).
+the frontend consists of [EmberJS](https://emberjs.com/) (+[Bootstrap 4](https://getbootstrap.com/)).
 
 See [#contributing](#Contributing) for more details on how you can help shape **legacy-rp-cad**. We're always down to improve and receive feedback.
 
