@@ -22,7 +22,7 @@ class Warrant extends Model
      * @var array
      */
     protected $fillable = [
-        'issuer_id', 'processed', 'expires_at',
+        'character_cid', 'issuer_id', 'processed', 'expires_at',
     ];
 
     /**

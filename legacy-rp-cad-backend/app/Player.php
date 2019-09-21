@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Date;
 
 /**
  * @property string identifier
+ * @property string license
  * @property string name
+ * @property array identifiers
+ * @property boolean staff
+ * @property Date seen
  */
 class Player extends Model
 {
@@ -25,7 +30,18 @@ class Player extends Model
      * @var array
      */
     protected $fillable = [
-        'identifier', 'name',
+        'identifier', 'license', 'name', 'identifiers', 'staff', 'playtime', 'seen',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'identifiers' => 'array',
+        'staff'       => 'boolean',
+        'seen'        => 'date',
     ];
 
     /**

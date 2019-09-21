@@ -46,8 +46,8 @@ class User extends Authenticatable
     ];
 
     /**
-     * Gets the identifier, which is a HEX version of the account id with a "steam:" prefix. Used as a way of
-     * identifying players on the game-server.
+     * Gets the identifier: a HEX version of the account id with a "steam:" prefix. Used as a way of identifying
+     * players on the game-server.
      *
      * @return string
      */

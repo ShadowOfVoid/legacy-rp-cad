@@ -55,10 +55,10 @@ class Character extends Model
      */
     protected $casts = [
         'basicneeds' => 'array',
-        'licenses' => 'array',
-        'model' => 'array',
-        'tattoos' => 'array',
-        'ammo' => 'array',
+        'licenses'   => 'array',
+        'model'      => 'array',
+        'tattoos'    => 'array',
+        'ammo'       => 'array',
         'animations' => 'array',
     ];
 
@@ -93,13 +93,23 @@ class Character extends Model
     }
 
     /**
-     * Gets
+     * Gets the character's received warrants.
      *
      * @return HasMany
      */
     public function warrants()
     {
         return $this->hasMany(Warrant::class);
+    }
+
+    /**
+     * Gets all the cars this character owns.
+     *
+     * @return HasMany
+     */
+    public function cars()
+    {
+        return $this->hasMany(Car::class, 'cid');
     }
 
 }
