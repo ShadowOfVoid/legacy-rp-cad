@@ -12,7 +12,7 @@
     </a>
 </p>
 
-<strong>100% free.</strong>
+<strong>100% FREE + OPEN SOURCE.</strong>
 
 A full web-based CAD (Computer-Aided-Dispatch) solution for the FiveM server Legacy Roleplay. Seamlessly log in with your in-game FiveM character using Steam. The backend is written in PHP using [Laravel Framework](https://laravel.com/), while
 the frontend consists of [EmberJS](https://emberjs.com/) (+[Bootstrap 4](https://getbootstrap.com/)).
