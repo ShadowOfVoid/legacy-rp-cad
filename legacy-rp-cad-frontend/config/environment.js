@@ -4,7 +4,7 @@ module.exports = function(environment) {
     let ENV = {
         modulePrefix: 'legacy-rp-cad',
         environment,
-        rootURL: '/app/',
+        rootURL: '/',
         locationType: 'auto',
         EmberENV: {
             FEATURES: {
@@ -44,7 +44,7 @@ module.exports = function(environment) {
     }
 
     if (environment === 'production') {
-        ENV.rootURL = '/app/';
+        // Production specific variables.
     }
 
     return ENV;
