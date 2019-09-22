@@ -18,13 +18,6 @@ class LoginController extends AbstractSteamLoginController
 {
 
     /**
-     * Where to redirect after login if none is provided.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/app/callback#';
-
-    /**
      * {@inheritdoc}
      */
     public function authenticated(Request $request, SteamUser $steam) : RedirectResponse
@@ -32,7 +25,7 @@ class LoginController extends AbstractSteamLoginController
         // Get or create the authenticating user from their steam details.
         $user = $this->get_or_create_user($steam);
 
-        return response()->redirectTo($this->redirectTo . 'access_token=' . $user->api_token);
+        return response()->redirectTo($request->get('redirect') . '#access_token=' . $user->api_token);
     }
 
     /**
