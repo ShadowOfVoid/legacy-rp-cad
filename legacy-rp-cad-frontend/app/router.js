@@ -7,8 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-    this.route('cad', function() {});
     this.route('callback');
+    this.route('cad', function() {});
 });
 
 export default Router;
