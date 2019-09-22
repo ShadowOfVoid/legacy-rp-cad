@@ -60,7 +60,7 @@ class Car extends Model
      *
      * @return BelongsTo
      */
-    protected function character()
+    protected function character() : BelongsTo
     {
         return $this->belongsTo(Character::class, 'cid');
     }

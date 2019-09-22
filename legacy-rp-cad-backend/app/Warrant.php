@@ -40,7 +40,7 @@ class Warrant extends Model
      *
      * @return bool
      */
-    protected function getActiveAttribute()
+    protected function getActiveAttribute() : bool
     {
         return !($this->hasExpired() || $this->processed);
     }
@@ -50,7 +50,7 @@ class Warrant extends Model
      *
      * @return bool
      */
-    public function hasExpired()
+    public function hasExpired() : bool
     {
         return Date::now()->isAfter($this->expires_at);
     }
@@ -60,7 +60,7 @@ class Warrant extends Model
      *
      * @return BelongsTo
      */
-    protected function character()
+    protected function character() : BelongsTo
     {
         return $this->belongsTo(Character::class);
     }
@@ -70,7 +70,7 @@ class Warrant extends Model
      *
      * @return BelongsTo
      */
-    protected function issuer()
+    protected function issuer() : BelongsTo
     {
         return $this->belongsTo(Player::class);
     }

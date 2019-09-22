@@ -25,7 +25,9 @@ This list only contains some of the most notable contributors. For the full list
 * ExpDev07 (Marius) - creator and maintainer of both frontend and backend.
 
 ## Pictures
-(will be posted soon once some design decisions are finalized).
+<img src="https://github.com/ExpDev07/legacy-rp-cad/raw/master/logo.png" height="150px" width="150px" alt="Login Page" />
+
+(more will be posted soon once some design decisions are finalized).
 
 ## Contributing
 (W.I.P).

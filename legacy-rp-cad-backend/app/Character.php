@@ -87,7 +87,7 @@ class Character extends Model
      *
      * @return BelongsTo
      */
-    public function player()
+    public function player() : BelongsTo
     {
         return $this->belongsTo(Player::class, 'identifier', 'identifier');
     }
@@ -97,7 +97,7 @@ class Character extends Model
      *
      * @return HasMany
      */
-    public function warrants()
+    public function warrants() : HasMany
     {
         return $this->hasMany(Warrant::class);
     }
@@ -107,7 +107,7 @@ class Character extends Model
      *
      * @return HasMany
      */
-    public function cars()
+    public function cars() : HasMany
     {
         return $this->hasMany(Car::class, 'cid');
     }

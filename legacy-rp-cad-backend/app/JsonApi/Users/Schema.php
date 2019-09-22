@@ -18,7 +18,7 @@ class Schema extends SchemaProvider
      * @param $resource Resource The domain record being serialized.
      * @return string
      */
-    public function getId($resource)
+    public function getId($resource) : string
     {
         return (string) $resource->getRouteKey();
     }
@@ -27,7 +27,7 @@ class Schema extends SchemaProvider
      * @param $resource User The domain record being serialized.
      * @return array
      */
-    public function getAttributes($resource)
+    public function getAttributes($resource) : array
     {
         return [
             'account-id' => $resource->account_id,

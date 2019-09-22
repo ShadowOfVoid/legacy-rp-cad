@@ -2,38 +2,69 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\User;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use kanalumaddela\LaravelSteamLogin\Http\Controllers\AbstractSteamLoginController;
+use kanalumaddela\LaravelSteamLogin\SteamUser;
 
-class LoginController extends Controller
+/**
+ * A login controller to authenticate with steam.
+ *
+ * @package App\Http\Controllers\Auth
+ */
+class LoginController extends AbstractSteamLoginController
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Where to redirect after login if none is provided.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/app/callback#';
 
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * {@inheritdoc}
      */
-    public function __construct()
+    public function authenticated(Request $request, SteamUser $steam) : RedirectResponse
     {
-        $this->middleware('guest')->except('logout');
+        // Get or create the authenticating user from their steam details.
+        $user = $this->get_or_create_user($steam);
+
+        return response()->redirectTo($this->redirectTo . 'access_token=' . $user->api_token);
     }
+
+    /**
+     * Gets or creates a new user based on the provided steam profile.
+     *
+     * @param SteamUser $steam The steam profile.
+     * @return User
+     */
+    protected function get_or_create_user(SteamUser $steam) : User
+    {
+        // Attempt to find the user and return them if found, otherwise create.
+        $user = User::where('account_id', $steam->steamId)->first();
+        return $user ? $user : $this->create_user($steam);
+    }
+
+    /**
+     * Creates a new user from the provided steam profile.
+     *
+     * @param SteamUser $steam The steam profile.
+     * @return User
+     */
+    protected function create_user(SteamUser $steam) : User
+    {
+        // Make sure to fetch the steam user information.
+        $steam->getUserInfo();
+
+        return User::create([
+            'account_id' => $steam->steamId,
+            'name' => $steam->name,
+            'avatar' => $steam->avatar,
+            'api_token' => Str::random(60)
+        ]);
+    }
+
 }

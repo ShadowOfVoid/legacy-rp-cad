@@ -49,7 +49,7 @@ class Player extends Model
      *
      * @return HasMany
      */
-    public function characters()
+    public function characters() : HasMany
     {
         return $this->hasMany(Character::class, 'identifier', 'identifier');
     }

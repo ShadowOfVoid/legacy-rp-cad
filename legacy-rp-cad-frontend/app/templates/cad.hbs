@@ -1,0 +1,13 @@
+<div class="col">
+    <h1>
+        Hey, {{currentUser.user.name}}
+    </h1>
+
+    <img class="d-block" src={{currentUser.user.avatar}} alt="Profile picture">
+
+    <button class="btn btn-danger mt-2" onclick={{action 'logout'}}>
+        Logout
+    </button>
+
+    {{outlet}}
+</div>

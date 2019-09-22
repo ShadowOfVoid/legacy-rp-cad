@@ -1,4 +1,9 @@
 {{!-- Global application wrapper --}}
 <div id="app">
-    {{outlet}}
+    {{!-- Create base bootstrap grid layout --}}
+    <div class="container-fluid">
+        <div class="row h-100">
+            {{outlet}}
+        </div>
+    </div>
 </div>

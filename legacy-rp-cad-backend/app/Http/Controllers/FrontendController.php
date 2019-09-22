@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 /**
  * Controller for rendering frontend framework.
@@ -15,7 +15,7 @@ class FrontendController extends Controller
     /**
      * Shows the entry index file.
      */
-    function show() {
+    function show() : View {
         return view()->file('app/index.html');
     }
 

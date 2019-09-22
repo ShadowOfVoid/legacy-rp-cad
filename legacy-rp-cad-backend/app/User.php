@@ -51,7 +51,7 @@ class User extends Authenticatable
      *
      * @return string
      */
-    protected function getIdentifierAttribute()
+    protected function getIdentifierAttribute() : string
     {
         return 'steam:' . dechex($this->account_id);
     }
@@ -61,7 +61,7 @@ class User extends Authenticatable
      *
      * @return HasOne
      */
-    public function player()
+    public function player() : HasOne
     {
         return $this->hasOne(Player::class, 'identifier', 'identifier');
     }
