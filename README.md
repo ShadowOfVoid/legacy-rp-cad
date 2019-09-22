@@ -6,11 +6,13 @@
 
 # legacy-rp-cad
 
-<a href='https://ko-fi.com/C1C510DUQ' target='_blank'>
+<p>
+    <a href='https://ko-fi.com/C1C510DUQ' target='_blank'>
 	<img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-</a>
+    </a>
+</p>
 
-<br />
+<strong>100% free.</strong>
 
 A full web-based CAD (Computer-Aided-Dispatch) solution for the FiveM server Legacy Roleplay. Seamlessly log in with your in-game FiveM character using Steam. The backend is written in PHP using [Laravel Framework](https://laravel.com/), while
 the frontend consists of [EmberJS](https://emberjs.com/) (+[Bootstrap 4](https://getbootstrap.com/)).
