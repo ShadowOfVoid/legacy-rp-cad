@@ -45,6 +45,7 @@ module.exports = function(environment) {
 
     if (environment === 'production') {
         // Production specific variables.
+        ENV.rootURL = '/app/';
     }
 
     return ENV;

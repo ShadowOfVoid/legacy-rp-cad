@@ -1,13 +1,20 @@
-<div class="col">
-    <h1>
-        Hey, {{currentUser.user.name}}
-    </h1>
+<nav class="sidebar">
+    <h2>Sidebar</h2>
+</nav>
 
-    <img class="d-block" src={{currentUser.user.avatar}} alt="Profile picture">
+<main class="col">
+    <div>
+        <h1>
+            Hey, {{currentUser.user.name}}
+        </h1>
 
-    <button class="btn btn-danger mt-2" onclick={{action 'logout'}}>
-        Logout
-    </button>
+        <img class="d-block" src={{currentUser.user.avatar}} alt="Profile picture">
+
+        {{!-- Logging out --}}
+        <button class="btn btn-danger mt-2" {{action 'logout'}}>
+            Logout
+        </button>
+    </div>
 
     {{outlet}}
-</div>
+</main>
