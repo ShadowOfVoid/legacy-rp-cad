@@ -15,6 +15,5 @@ $factory->define(User::class, function (Faker $faker) {
         'account_id' => $faker->numberBetween(10000000000, 100000000000),
         'name'       => $faker->name,
         'avatar'     => $avatar,
-        'api_token'  => $faker->uuid
     ];
 });
