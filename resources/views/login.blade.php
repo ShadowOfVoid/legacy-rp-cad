@@ -21,7 +21,7 @@
                         </p>
 
                         <a href="{{ route('login.steam') }}" class="btn btn-primary">
-                            <i class="fab fa-steam-square"></i>
+                            <!--<i class="fab fa-steam-square"></i>-->
                             Login with steam now
                         </a>
                     </div>
