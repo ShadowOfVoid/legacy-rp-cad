@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h1>Welcome, {{ auth()->user()->name }}</h1>
+    <h1>Welcome, {{ auth()->user()->name }} <span>({{ auth()->user()->identifier }})</span></h1>
     <img src="{{ auth()->user()->avatar }}" alt="Avatar">
 
     <form method="POST" action="{{ route('logout') }}">
