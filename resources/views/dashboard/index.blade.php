@@ -5,4 +5,9 @@
 @section('content')
     <h1>Welcome, {{ auth()->user()->name }}</h1>
     <img src="{{ auth()->user()->avatar }}" alt="Avatar">
+
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button class="btn btn-warning" type="submit">Logout</button>
+    </form>
 @endsection
