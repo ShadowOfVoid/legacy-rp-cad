@@ -18,10 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('account_id');
             $table->string('name');
             $table->string('avatar');
+            $table->rememberToken();
             $table->timestamps();
-
-            // Token to use for making API requests on this user's behalf.
-            $table->string('api_token', 80)->unique()->nullable();
         });
     }
 
