@@ -1,4 +1,9 @@
-
+# Generated content using mix
+/public/js
+/public/css
+/public/fonts
+/public/build
+/public/mix-manifest.json
 
 # IDE specific
 /.idea
