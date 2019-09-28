@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page title -->
-    <title>Legacy CAD: @yield('title')</title>
+    <title>Legacy CAD - @yield('title')</title>
 
     <!-- Favicon -->
     <link integrity="" rel="icon" type="image/png" href="{{ asset('favicon.jpg') }}">
